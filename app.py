@@ -12,8 +12,11 @@ def configure(binder: Binder) -> Binder:
     """Handle bindings to create the item container."""
     binder.bind(
         ItemsProvider,
-        ItemsProvider([{"Name": "Test 1"}])
+        ItemsProvider([
+            {"Name": "Test 1"}
+        ])
     )
+    return binder
 
 
 if __name__ == "__main__":
